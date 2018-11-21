@@ -76,6 +76,10 @@ function listTeamsIds () {
 // 1 Arreglo con los nombres de los equipos ordenados y agrupados por su pais de origen.
 function listTeamsByCountry () {
   // CODE HERE
+  let response = teams.sort((a, b) => {
+    return a.country > b.country
+  })
+  return response.map((rsp) => rsp.id)
 }
 
 // 2 Arreglo con los nombres de los equipos ordenados de mayor a menor por la cantidad de victorias en champions league.
